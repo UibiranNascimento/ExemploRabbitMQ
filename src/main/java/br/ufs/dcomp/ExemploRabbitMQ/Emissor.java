@@ -40,20 +40,18 @@ public class Emissor {
     channel.queueBind(QUEUE_NAME5, EXCHANGE_NAME, "si");
 
     String messageCC = "Boa tarde. reunião ordinária dia 29/10/2025 às 14h.";
+    String messageEC = "Boa tarde. reunião ordinária dia 30/10/2025 às 14h.";
+    String messageSI = "Boa tarde. reunião ordinária dia 31/10/2025 às 14h.";
     
                     //  (exchange, routingKey, props, message-body         ); 
     channel.basicPublish(EXCHANGE_NAME, "cc", null, messageCC.getBytes("UTF-8"));
     System.out.println(" [x] Mensagem enviada: '" + messageCC + "'");
     
-    String messageEC = "Boa tarde. reunião ordinária dia 30/10/2025 às 14h.";
-    
                     //  (exchange, routingKey, props, message-body         ); 
     channel.basicPublish(EXCHANGE_NAME, "ec", null, messageEC.getBytes("UTF-8"));
     System.out.println(" [x] Mensagem enviada: '" + messageEC + "'");
     
-    String messageSI = "Boa tarde. reunião ordinária dia 31/10/2025 às 14h.";
-    
-                    //  (exchange, routingKey, props, message-body         ); 
+                        //  (exchange, routingKey, props, message-body         ); 
     channel.basicPublish(EXCHANGE_NAME, "si", null, messageSI.getBytes("UTF-8"));
     System.out.println(" [x] Mensagem enviada: '" + messageSI + "'");
 
