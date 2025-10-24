@@ -4,13 +4,13 @@ import com.rabbitmq.client.*;
 
 import java.io.IOException;
 
-public class Receptor {
+public class Receptor1 {
 
-  private final static String QUEUE_NAME = "f2";
+  private final static String QUEUE_NAME = "tarcisio";
 
   public static void main(String[] argv) throws Exception {
     ConnectionFactory factory = new ConnectionFactory();
-    factory.setHost("98.81.189.38"); // Alterar
+    factory.setHost("98.93.223.159"); // Alterar
     factory.setUsername("admin"); // Alterar
     factory.setPassword("password"); // Alterar
     factory.setVirtualHost("/");   
